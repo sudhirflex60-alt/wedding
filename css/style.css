@@ -1,0 +1,35 @@
+:root{--red:#5a0f1a;--maroon:#3a0a12;--gold:#d4af37;--ivory:#fff4dc}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at top,#7a1424,var(--maroon));color:var(--ivory);font:500 18px/1.7 'Cormorant Garamond',serif}
+body.l-te{font-family:'Noto Serif Telugu',serif}body.l-hi{font-family:'Noto Serif Devanagari',serif}body.lock{overflow:hidden}
+.bar{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;padding:8px 12px;background:#3a0a12ee;border-bottom:1px solid var(--gold)}
+.bar nav{display:flex;gap:12px;overflow-x:auto}.bar a{color:var(--gold);text-decoration:none;white-space:nowrap}
+.ctl{display:flex;align-items:center;gap:4px}.ctl button{background:none;border:1px solid var(--gold);color:var(--gold);border-radius:6px;padding:2px 8px;cursor:pointer}#vol{width:70px}
+section{max-width:760px;margin:auto;padding:40px 16px;text-align:center}
+h2{color:var(--gold);font-size:1.8rem;margin:1.6em 0 .6em;border-bottom:1px solid var(--gold);display:inline-block;padding:0 1em .2em}
+.names{font-size:clamp(2.2rem,9vw,4.2rem);color:var(--gold);margin:.2em 0;letter-spacing:.04em}
+.gold{color:var(--gold);font-size:1.3rem}.ganesh{font-size:1.6rem}.inv{max-width:560px;margin:1em auto}.note{opacity:.8;font-size:.95rem}
+.card{border:2px solid var(--gold);outline:1px solid #d4af3766;outline-offset:4px;border-radius:4px;padding:18px;margin:16px 0;background:#ffffff0d;list-style:none;text-align:left}
+.card li,.card p{margin:.3em 0}.card span{display:block;color:var(--gold);font-size:.9rem}.card b{font-size:1.15rem}
+#steps{padding-left:36px;list-style:decimal}#steps li{margin:.6em 0}
+.btn,.opt{display:inline-block;background:var(--gold);color:var(--maroon);border:0;border-radius:4px;padding:10px 18px;margin:4px;font:inherit;font-weight:700;cursor:pointer;text-decoration:none}
+.opt{display:block;width:100%;text-align:left;background:#ffffff1a;color:var(--ivory);border:1px solid var(--gold)}.lnk{background:none;border:0;color:var(--gold);cursor:pointer;font:inherit}
+.btn:focus-visible,.opt:focus-visible,a:focus-visible{outline:3px solid #fff}
+input,select,textarea{width:100%;margin:6px 0;padding:10px;border-radius:4px;border:1px solid var(--gold);background:#fff9;font:inherit}
+video,iframe{width:100%;aspect-ratio:16/9;border:2px solid var(--gold);background:#000}
+.cd{display:flex;justify-content:center;gap:10px;margin-top:20px}.cd div{border:1px solid var(--gold);padding:10px;min-width:70px}.cd b{display:block;font-size:2rem;color:var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.cell{font-size:1.6rem;padding:10px;background:#ffffff1a;border:1px solid var(--gold);border-radius:4px;cursor:pointer}
+.bar2{height:10px;background:#ffffff33}.bar2 i{display:block;height:100%;background:var(--gold);animation:grow 1.2s ease-out}@keyframes grow{from{width:0}}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}.gal img{width:100%;aspect-ratio:1;object-fit:cover;border:2px solid var(--gold);cursor:pointer}
+#lb{position:fixed;inset:0;background:#000d;z-index:20;display:flex;align-items:center;justify-content:center}#lb[hidden]{display:none}#lb img{max-width:92vw;max-height:92vh}
+blockquote{border-left:3px solid var(--gold);margin:10px 0;padding:4px 12px;text-align:left}.row{display:flex;flex-wrap:wrap;justify-content:center;margin-top:12px}
+footer{text-align:center;padding:30px 16px;border-top:1px solid var(--gold);color:var(--gold)}
+#gate{position:fixed;inset:0;z-index:30;display:flex;align-items:center;justify-content:center;background:#1a0307;text-align:center}
+.door{position:absolute;top:0;bottom:0;width:50%;background:linear-gradient(#6b1220,#3a0a12);border:6px double var(--gold);transition:transform 2.6s cubic-bezier(.6,0,.2,1)}
+.d1{left:0}.d2{right:0}#gate.open .d1{transform:translateX(-100%)}#gate.open .d2{transform:translateX(100%)}
+.gc{position:relative;z-index:2;transition:opacity 1s}#gate.open .gc{opacity:0}
+.diyas span{font-size:2rem;opacity:.1;animation:lit 1s forwards}.diyas span:nth-child(2){animation-delay:.6s}.diyas span:nth-child(3){animation-delay:1.2s}.diyas span:nth-child(4){animation-delay:1.8s}.diyas span:nth-child(5){animation-delay:2.4s}
+@keyframes lit{to{opacity:1;filter:drop-shadow(0 0 10px #ffb300)}}
+.pt{position:fixed;top:-30px;z-index:4;pointer-events:none;animation:fall linear infinite}@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.pt,.door,.diyas span{animation:none;transition:none}}
+.gal img{object-position:center 25%}
